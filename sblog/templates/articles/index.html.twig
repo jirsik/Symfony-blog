@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}sBlog{% endblock %}
+
+{% block body %}
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Article Title</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if articles %}
+            {% for article in articles %}
+            <tr>
+                <td>{{ article }}</td>
+                <td>
+                    <a href="
+                    /article/1" class="btn btn-dark">Read</a>
+                </td>
+            </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td>There are no articles</td>
+                <td></td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>
+      
+{% endblock %}
